@@ -10,8 +10,8 @@ let generateGif = () => {
     let q = document.getElementById("search-box").value;
     //mostro 9 gif 3-3-3
     let gifCount = 9;
-    //genera un offset casuale tra 0 e 20 così ogni volta che si clicca genera gif diverse
-    let offset = Math.floor(Math.random() * 20);
+    //genera un offset casuale tra 0 e 100 così ogni volta che si clicca genera gif diverse
+    let offset = Math.floor(Math.random() * 100);
     //API URL con offset casuale
     let finalURL = `https://api.giphy.com/v1/gifs/search?api_key=${apiKey}&q=${q}&limit=${gifCount}&offset=${offset}&rating=g&lang=en`;
     //pulisce la pagina
