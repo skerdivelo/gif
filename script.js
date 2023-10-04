@@ -21,7 +21,7 @@ let generateGif = () => {
   fetch(finalURL)
     .then((resp) => resp.json())
     .then((info) => {
-      console.log(info.data);
+      //console.log(info.data);
       //tutti i dati sono in info.data
       let gifsData = info.data;
       gifsData.forEach((gif) => {
@@ -52,11 +52,11 @@ let generateGif = () => {
           navigator.clipboard
             .writeText(copyLink)
             .then(() => {
-              alert("GIF copied to clipboard");
+              alert("GIF copiata");
             })
             .catch(() => {
               //se non funziona il clipboard usa un input temporaneo
-              alert("GIF copied to clipboard");
+              alert("GIF copiata");
               let hiddenInput = document.createElement("input");
               hiddenInput.setAttribute("type", "text");
               document.body.appendChild(hiddenInput);
